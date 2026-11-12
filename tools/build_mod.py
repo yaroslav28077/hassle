@@ -247,6 +247,20 @@ def build_all(
                     continue
                 old_f.unlink()
 
+    # fix: каждый ресурс oneas_*, на который ссылаются пропатченные Hud.js/Hud.css, должен попасть в пак
+    import re  # noqa: PLC0415
+
+    packed_targets = {(r.get("target_package") or "").lower() for grp in by_group.values() for r in grp}
+    patched_dir = ROOT / "work" / "ui" / "patched" / "UserInterface" / "Main" / "assets"
+    refs: set[str] = set()
+    for fn in ("Hud.js", "Hud.css", "Authorization.css"):
+        fp = patched_dir / fn
+        if fp.is_file():
+            refs |= set(re.findall(r"oneas_[\w.-]+?\.(?:png|svg|gif)", fp.read_text(encoding="utf-8")))
+    missing_refs = sorted(x for x in refs if f"hassleonline/content/userinterface/main/assets/{x}".lower() not in packed_targets)
+    if missing_refs:
+        raise SystemExit(f"Пропатченный UI ссылается на ресурсы, которых нет в паке (добавьте строки в asset_map.csv): {missing_refs}")
+
     paks_manifest: list[dict] = []
     if single_pak:
         ordered_rows = [

@@ -22,7 +22,8 @@ import shutil
 from pathlib import Path
 
 from common import ROOT, get_logger
-from oneas_runtime import PANEL_CSS, PANEL_OPTIONS, build_switchable_hud_js, panel_js, scope_css
+from oneas_runtime import (ONEAS_X_CSS, ONEAS_X_SPEED_EXTRA, PANEL_CSS, PANEL_OPTIONS, PRESETS,
+                            build_switchable_hud_js, panel_js, scale_vh, scope_css)
 
 EXPORTS_DIR = ROOT / "Exports"
 ONEAS_IMG = ROOT / "work" / "build_only" / "uiresources" / "oneas-img"
@@ -88,6 +89,11 @@ def copy_oneas_assets() -> list[str]:
         "speed/wash-active.svg": "oneas_wash_active.svg",
         "speed/wash-active_danger.svg": "oneas_wash_active_danger.svg",
         "interfaces/noise.gif": "oneas_noise.gif",
+        # v6: точный вариант ONEAS (плашки под радаром, бейдж зоны)
+        "hud/icon-health.png": "oneas_icon_health.png",
+        "hud/icon-armour.png": "oneas_icon_armour.png",
+        "hud/icon-hunger.png": "oneas_icon_hunger.png",
+        "hud/icon-fish.svg": "oneas_icon_fish.svg",
     }
     copied = []
     for src_rel, dst_name in copies.items():
@@ -505,16 +511,17 @@ def runtime_defaults() -> dict:
     """Значения по умолчанию для панели (build_options.yaml: runtime_defaults), с проверкой допустимых значений."""
     import yaml  # noqa: PLC0415
 
-    d = {"safe": False, "top": "oneas", "radar": "oneas", "speed": "oneas"}
+    d = {"safe": False, **PRESETS["maximum"]}
     p = ROOT / "build_options.yaml"
     if p.is_file():
         cfg = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
         d.update({k: v for k, v in (cfg.get("runtime_defaults") or {}).items() if k in d})
-    choices = {o["key"]: [c[0] for c in o["choices"]] for o in PANEL_OPTIONS}
+    choices = {o["key"]: [c[0] for c in o["choices"]] for o in PANEL_OPTIONS if "key" in o}
     for k, allowed in choices.items():
         if d[k] not in allowed:
             raise SystemExit(f"runtime_defaults.{k}={d[k]!r}: допустимо {allowed}")
     d["__choices"] = choices
+    d["__presets"] = PRESETS
     return d
 
 
@@ -544,7 +551,10 @@ def main() -> None:
 
     sections = split_hud_css_sections(ONEAS_HUD_CSS)
     scoped = "\n".join(scope_css(sections[g], f"oa-{g}") for g in ("top", "radar", "speed"))
-    hud_css = hud_css_src.read_text(encoding="utf-8") + "\n" + scoped + "\n" + PANEL_CSS
+    # точный ONEAS: спидометр = уменьшенная копия v5 (x0.79) + доработки, остальное — отдельные правила
+    speed_x = scope_css(scale_vh(sections["speed"], 0.79), "oa-speed-x") + ONEAS_X_SPEED_EXTRA
+    hud_css = (hud_css_src.read_text(encoding="utf-8") + "\n" + scoped + "\n" + speed_x + "\n" + ONEAS_X_CSS
+               + "\n" + PANEL_CSS)
     log.info("Hud.css: %d байт", write_text_lf(OUT_ASSETS / "Hud.css", hud_css))
 
     auth_css = auth_css_src.read_text(encoding="utf-8") + "\n" + scope_css(ONEAS_AUTH_CSS, "oa-on")
