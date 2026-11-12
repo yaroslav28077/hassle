@@ -1,0 +1,7 @@
+<!DOCTYPE html><html><head><style>html,body{margin:0;background:#333;overflow:hidden}
+#f{border:0;transform-origin:0 0;position:absolute;left:0;top:0;background:linear-gradient(160deg,#6d7b86,#2c3338 60%,#1d2124)}</style></head>
+<body><iframe id="f"></iframe><script>
+const q=new URLSearchParams(location.search);const w=+(q.get('w')||1920),h=+(q.get('h')||1080);
+const f=document.getElementById('f');f.width=w;f.height=h;f.style.width=w+'px';f.style.height=h+'px';
+const s=Math.min(innerWidth/w,innerHeight/h);f.style.transform=`scale(${s})`;f.src='/index.html'+(q.get('p')?('?'+q.get('p')):'');
+window.__scale=s;</script></body></html>

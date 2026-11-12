@@ -1,13 +1,16 @@
-"""Фаза 7. Собирает out/release/<mod>/ с install.bat, configure.bat, uninstall.bat и README.
+"""Фаза 7. Релиз: out/release/<mod>_<версия>/ + zip.
 
 python tools/make_installer.py
 
-install.bat: читает build_manifest.json, даёт выбор «установить всё / выбрать модули»,
-делает бэкап перезаписываемых файлов и копирует выбранные паки в <игра>/<Project>/Content/Paks/<mods_subdir>/.
-configure.bat: открывает оффлайн-конфигуратор configurator.html для настройки build_options.yaml.
-uninstall.bat: удаляет все паки мода ({mod}*.pak/.utoc/.ucas/.sig) и возвращает бэкап.
+v6: один пак (все варианты внутри, переключение в игре через «Настройки ONEAS»), поэтому
+установщик без выбора модулей. install.bat:
+- сам ищет папку игры (путь из config + стандартные пути), иначе спрашивает;
+- просит права администратора, если игра в Program Files;
+- не ставит мод при запущенной игре;
+- сверяет manifest.json лаунчера с update_guard.txt (не обновилась ли игра после сборки мода);
+- бэкапит совпадающие файлы, убирает паки старых версий мода и кладёт zzz_OneasPort_P.pak/.utoc/.ucas в ~mods.
+uninstall.bat удаляет все zzz_OneasPort* и возвращает бэкап. Файлов игры в релизе нет.
 """
-# fix: поддержка модульных паков из out/build_manifest.json, выбор «всё / выбрать модули», configure.bat и полный uninstall.bat
 from __future__ import annotations
 
 import datetime as dt
@@ -17,228 +20,174 @@ from pathlib import Path
 
 from common import ROOT, get_logger, load_config
 
-INSTALL = r"""@echo off
-chcp 65001 >nul
-setlocal enabledelayedexpansion
-if not exist "%~dp0paks\" (
-  echo ОШИБКА: папка "paks" не найдена рядом с install.bat.
-  echo Если вы открыли ZIP-архив без распаковки — сначала извлеките все файлы в любую папку и запустите install.bat оттуда.
+FIND_GAME = r"""set "GAME="
+for %%G in ("{game}" "C:\Program Files (x86)\HASSLE GAMES\Hassle Online" "C:\Program Files\HASSLE GAMES\Hassle Online" "D:\HASSLE GAMES\Hassle Online" "D:\Games\HASSLE GAMES\Hassle Online") do (
+  if not defined GAME if exist "%%~G\{project}\Content\Paks\" set "GAME=%%~G"
+)
+if not defined GAME (
+  echo Папка HASSLE 2.0 не найдена автоматически.
+  set /p "GAME=Вставьте путь к папке игры (где лежит папка {project}): "
+)
+set "GAME=%GAME:"=%"
+if not exist "%GAME%\{project}\Content\Paks\" (
+  echo [ОШИБКА] Не найдена папка "%GAME%\{project}\Content\Paks". Проверьте путь.
   pause & exit /b 1
 )
-set "GAME={game}"
-set /p "GAME=Папка HASSLE 2.0 [%GAME%]: "
-set "DEST=!GAME!\{project}\Content\Paks\{subdir}"
-set "BACKUP=!GAME!\{project}\Content\Paks\_oneasport_backup"
-if exist "!GAME!\{project}\Content\Paks\" goto :paks_ok
-echo Не найдена папка "!GAME!\{project}\Content\Paks". Проверьте путь к игре.
-pause & exit /b 1
-
-:paks_ok
-mkdir "!DEST!" 2>nul
-mkdir "!BACKUP!" 2>nul
-
-echo.
-echo === Модули мода в пакете ===
-{module_list_echo}
-echo.
-echo [1] Установить ВСЕ доступные модули
-echo [2] Выбрать модули по одному
-set "MODE=1"
-set /p "MODE=Режим установки [1]: "
-
-if "%MODE%"=="2" goto :selective
-
-for %%F in ("%~dp0paks\*.pak" "%~dp0paks\*.utoc" "%~dp0paks\*.ucas" "%~dp0paks\*.sig") do (
-  if exist "%%F" (
-    if exist "!DEST!\%%~nxF" copy /y "!DEST!\%%~nxF" "!BACKUP!\" >nul
-    copy /y "%%F" "!DEST!\" >nul
-    if errorlevel 1 (
-      echo [ОШИБКА] Не удалось скопировать %%~nxF. Запустите install.bat от имени администратора!
-      pause & exit /b 1
-    )
-    echo + %%~nxF
-  )
-)
-goto :done
-
-:selective
-{selective_blocks}
-
-:done
-echo.
-echo Готово. Выбранные модули установлены в "!DEST!"
-echo ВАЖНО: модификация файлов онлайн-игры выполняется на ваш страх и риск. Проверьте правила проекта HASSLE.
-pause
+echo Игра: %GAME%
 """
 
-CONFIGURE = r"""@echo off
+ELEVATE = r"""net session >nul 2>&1
+if errorlevel 1 (
+  echo Нужны права администратора для записи в папку игры. Сейчас появится запрос Windows...
+  powershell -NoProfile -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
+  exit /b
+)
+"""
+
+INSTALL = r"""@echo off
 chcp 65001 >nul
 setlocal
-echo Открытие оффлайн-конфигуратора configurator.html...
-if exist "%~dp0configurator.html" (
-  start "" "%~dp0configurator.html"
-  echo Скачайте настроенный build_options.yaml и выполните:
-  echo   python tools\build_mod.py --options build_options.yaml
-) else (
-  echo Файл configurator.html не найден рядом с configure.bat.
+cd /d "%~dp0"
+title ONEAS -> HASSLE {version}: установка
+if not exist "%~dp0paks\{mod}_P.pak" (
+  echo [ОШИБКА] Рядом с install.bat нет папки paks. Сначала распакуйте архив целиком, потом запускайте install.bat.
+  pause & exit /b 1
 )
+""" + ELEVATE + FIND_GAME + r"""
+tasklist /FI "IMAGENAME eq {exe}" 2>nul | find /I "{exe}" >nul
+if not errorlevel 1 (
+  echo [СТОП] Игра запущена. Закройте HASSLE и запустите install.bat ещё раз.
+  pause & exit /b 1
+)
+
+set "MANIFEST=%GAME%\manifest.json"
+if not exist "%MANIFEST%" (
+  echo manifest.json лаунчера не найден, проверка обновлений пропущена.
+  goto :copy
+)
+powershell -NoProfile -Command "$m=Get-Content -Raw -LiteralPath $env:MANIFEST | ConvertFrom-Json; $h=@{{}}; foreach($f in $m.files){{$h[[IO.Path]::GetFileName($f.path)]=$f.hash}}; $bad=@(); foreach($l in Get-Content -LiteralPath '%~dp0update_guard.txt'){{ $p=$l.Split('='); if($p.Length -eq 2 -and $h[$p[0]] -ne $p[1]){{$bad+=$p[0]}} }}; Write-Output ('Сборка игры: '+$m.build+', мод собран для {game_build}'); if($bad.Count){{Write-Output ('Изменились паки интерфейса: '+($bad -join ', ')); exit 1}} else {{exit 0}}"
+if not errorlevel 1 goto :copy
+echo.
+echo [ВНИМАНИЕ] После сборки мода игра обновила файлы интерфейса.
+echo Мод может перекрыть новые файлы и сломать HUD. Лучше дождаться новой версии мода.
+set "GO=n"
+set /p "GO=Всё равно установить? [y/N]: "
+if /i not "%GO%"=="y" exit /b 1
+
+:copy
+set "DEST=%GAME%\{project}\Content\Paks\{subdir}"
+set "BACKUP=%GAME%\{project}\Content\Paks\_oneasport_backup"
+mkdir "%DEST%" 2>nul
+mkdir "%BACKUP%" 2>nul
+rem паки прошлых версий мода (модульные v5 и др.) убираем, чтобы не конфликтовали
+for %%F in ("%DEST%\{mod}_*_P.pak" "%DEST%\{mod}_*_P.utoc" "%DEST%\{mod}_*_P.ucas") do if exist "%%~F" del /q "%%~F"
+for %%E in (pak utoc ucas) do (
+  if exist "%DEST%\{mod}_P.%%E" copy /y "%DEST%\{mod}_P.%%E" "%BACKUP%\" >nul
+  copy /y "%~dp0paks\{mod}_P.%%E" "%DEST%\" >nul
+  if errorlevel 1 (
+    echo [ОШИБКА] Не удалось скопировать {mod}_P.%%E в "%DEST%".
+    pause & exit /b 1
+  )
+  echo + {mod}_P.%%E
+)
+echo.
+echo Готово. Мод ONEAS {version} установлен в "%DEST%".
+echo Настройки: в игре ESC -^> «Настройки ONEAS». Если HUD ведёт себя странно, включите там «Безопасный режим» или запустите uninstall.bat.
+echo ВАЖНО: модификация файлов онлайн-игры выполняется на ваш страх и риск. Проверьте правила проекта HASSLE.
 pause
 """
 
 UNINSTALL = r"""@echo off
 chcp 65001 >nul
-setlocal enabledelayedexpansion
-set "GAME={game}"
-set /p "GAME=Папка HASSLE 2.0 [%GAME%]: "
-set "DEST=!GAME!\{project}\Content\Paks\{subdir}"
-set "BACKUP=!GAME!\{project}\Content\Paks\_oneasport_backup"
-if exist "!DEST!\" goto :dest_ok
-echo Папка "!DEST!" не найдена.
-pause & exit /b 0
-
-:dest_ok
-for %%F in ("!DEST!\{mod}*.pak" "!DEST!\{mod}*.utoc" "!DEST!\{mod}*.ucas" "!DEST!\{mod}*.sig") do (
-  if exist "%%F" (
-    del /q "%%F" 2>nul
+setlocal
+cd /d "%~dp0"
+title ONEAS -> HASSLE: удаление
+""" + ELEVATE + FIND_GAME + r"""
+set "DEST=%GAME%\{project}\Content\Paks\{subdir}"
+set "BACKUP=%GAME%\{project}\Content\Paks\_oneasport_backup"
+for %%F in ("%DEST%\{mod}*.pak" "%DEST%\{mod}*.utoc" "%DEST%\{mod}*.ucas" "%DEST%\{mod}*.sig") do (
+  if exist "%%~F" (
+    del /q "%%~F" 2>nul
     echo - удалён %%~nxF
   )
 )
-if exist "!BACKUP!\" (
-  for %%B in ("!BACKUP!\*") do (
-    if exist "%%B" (
-      copy /y "%%B" "!DEST!\" >nul
-      echo ~ восстановлен из бэкапа %%~nxB
-    )
-  )
-)
-echo Все паки мода удалены.
+if exist "%BACKUP%\" rmdir /s /q "%BACKUP%"
+echo Мод удалён, игра вернулась к оригиналу.
 pause
 """
 
+README = """ONEAS STUDIO -> HASSLE 2.0, версия {version} ({today})
+Собрано для сборки игры {game_build}.
 
-def _build_module_prompts(manifest_path: Path, paks: list[Path]) -> tuple[str, str]:
-    echo_lines: list[str] = []
-    sel_lines: list[str] = []
-    entries: list[tuple[str, str, str]] = []
+УСТАНОВКА
+1. Распакуйте архив целиком в любую папку.
+2. Закройте игру и запустите install.bat (попросит права администратора, если игра в Program Files).
+3. Установщик сам найдёт игру, проверит, не обновилась ли она, и положит мод в {project}\\Content\\Paks\\{subdir}.
 
-    if manifest_path.is_file():
-        m = json.loads(manifest_path.read_text(encoding="utf-8"))
-        for p in m.get("paks", []):
-            entries.append((p["pak_file"], p.get("group", ""), p.get("group_name", p["pak_file"])))
-    if not entries:
-        for p in paks:
-            entries.append((p.name, p.stem, p.name))
+НАСТРОЙКИ В ИГРЕ
+ESC -> «Настройки ONEAS» (или маленькая шестерёнка в правом верхнем углу, когда виден курсор).
+Можно переключать верхний HUD, радар и спидометр между вариантом ONEAS и родным HASSLE.
+«Безопасный режим» выключает все правки мода без удаления.
 
-    for i, (pak_file, grp, gname) in enumerate(entries, 1):
-        pak_stem = Path(pak_file).stem
-        safe_gname = gname.replace("(", "^(").replace(")", "^)")
-        echo_lines.append(f'echo   - {pak_file} ^(+ .utoc/.ucas, {safe_gname}^)')
-        copy_block = [
-            f'    for %%E in (.pak .utoc .ucas .sig) do (',
-            f'      if exist "%~dp0paks\\{pak_stem}%%E" (',
-            f'        if exist "!DEST!\\{pak_stem}%%E" copy /y "!DEST!\\{pak_stem}%%E" "!BACKUP!\\" >nul',
-            f'        copy /y "%~dp0paks\\{pak_stem}%%E" "!DEST!\\" >nul',
-            f'      )',
-            f'    )',
-        ]
-        if grp == "core":
-            sel_lines.extend(
-                [
-                    f'if exist "%~dp0paks\\{pak_file}" (',
-                    *[line[2:] for line in copy_block],
-                    f'  echo + {pak_stem} ^(.pak/.utoc/.ucas^) [обязательный базовый пак]',
-                    f')',
-                ]
-            )
-        else:
-            var = f"ANS_{i}"
-            sel_lines.extend(
-                [
-                    f'set "{var}=y"',
-                    f'set /p "{var}=Установить {safe_gname} ({pak_file})? [Y/n]: "',
-                    f'if /i "!{var}!"=="y" (',
-                    f'  if exist "%~dp0paks\\{pak_file}" (',
-                    *copy_block,
-                    f'    echo + {pak_stem} ^(.pak/.utoc/.ucas^)',
-                    f'  )',
-                    f')',
-                ]
-            )
-    return "\n".join(echo_lines), "\n".join(sel_lines)
+ЕСЛИ ИГРА ОБНОВИЛАСЬ
+Если после обновления HASSLE интерфейс выглядит сломанным: включите «Безопасный режим» или запустите uninstall.bat
+и дождитесь новой версии мода.
+
+УДАЛЕНИЕ
+uninstall.bat удаляет все файлы мода.
+
+Перенос выполнен с разрешения ONEAS STUDIO. Модификация файлов онлайн-игры выполняется на ваш страх и риск:
+проверьте правила проекта HASSLE.
+"""
 
 
 def main() -> None:
     log = get_logger("make_installer")
     cfg = load_config()
-    game = cfg["game"].get("install_dir", "C:\\Games\\HASSLE")
+    game = str(cfg["game"].get("install_dir", "")).replace("/", "\\")
     project = cfg["game"]["project_name"]
     subdir = cfg["game"].get("mods_subdir", "~mods")
     mod = cfg.get("mod", {}).get("pak_name", "zzz_OneasPort")
     version = cfg.get("mod", {}).get("version", "0.1.0")
+    exe = f"{project}-Win64-Shipping.exe"
 
     out_dir = ROOT / "out"
-    manifest_path = out_dir / "build_manifest.json"
-    # fix: брать точный список паков из build_manifest.json и исключать временные pilot/minitest паки
-    paks: list[Path] = []
-    if manifest_path.is_file():
-        m = json.loads(manifest_path.read_text(encoding="utf-8"))
-        for entry in m.get("paks", []):
-            stem = Path(entry["pak_file"]).stem
-            for ext in (".pak", ".utoc", ".ucas", ".sig"):
-                cand = out_dir / f"{stem}{ext}"
-                if cand.is_file():
-                    paks.append(cand)
-    if not paks:
-        paks = [
-            p
-            for p in sorted(out_dir.glob(f"{mod}*_P.*"))
-            if p.suffix in (".pak", ".utoc", ".ucas", ".sig")
-            and not p.name.startswith(f"{mod}_pilot_P.")
-            and "_minitest_" not in p.name
-        ]
-    if not paks:
-        raise SystemExit("В out/ нет паков мода. Сначала запустите build_mod.py или pak_build.py.")
+    paks = [out_dir / f"{mod}_P{ext}" for ext in (".pak", ".utoc", ".ucas")]
+    missing = [p.name for p in paks if not p.is_file()]
+    if missing:
+        raise SystemExit(f"Нет файлов {missing}. Сначала: python tools/build_mod.py --single-pak")
+
+    guard_path = out_dir / "update_guard.json"
+    guard = json.loads(guard_path.read_text(encoding="utf-8")) if guard_path.is_file() else {"files": [], "game_build": "?"}
+    guard_lines = sorted({f"{f['pak']}={f['pak_md5']}" for f in guard["files"] if f.get("pak") and f.get("pak_md5")})
 
     rel = out_dir / "release" / f"{mod}_{version}"
-    (rel / "paks").mkdir(parents=True, exist_ok=True)
-    for old in (rel / "paks").glob("*"):
-        old.unlink()
+    if rel.exists():
+        shutil.rmtree(rel)
+    (rel / "paks").mkdir(parents=True)
     for p in paks:
         shutil.copy(p, rel / "paks" / p.name)
-    if manifest_path.is_file():
-        shutil.copy(manifest_path, rel / "build_manifest.json")
-    cfg_html = out_dir / "configurator.html"
-    if cfg_html.is_file():
-        shutil.copy(cfg_html, rel / "configurator.html")
+    for extra in ("build_manifest.json", "configurator.html"):
+        if (out_dir / extra).is_file():
+            shutil.copy(out_dir / extra, rel / extra)
+    (rel / "update_guard.txt").write_text("\n".join(guard_lines) + "\n", encoding="utf-8")
 
-    mod_echo, mod_sel = _build_module_prompts(manifest_path, paks)
-    fmt = dict(
-        game=str(game).replace("/", "\\"),
-        project=project,
-        subdir=subdir,
-        mod=mod,
-        module_list_echo=mod_echo,
-        selective_blocks=mod_sel,
-    )
-    # fix: пишем с newline="\r\n" от нормализованного "\n", чтобы не возникали двойные \r\r\n на Windows
-    (rel / "install.bat").write_text(INSTALL.format(**fmt).replace("\r\n", "\n"), encoding="utf-8", newline="\r\n")
-    (rel / "configure.bat").write_text(CONFIGURE.replace("\r\n", "\n"), encoding="utf-8", newline="\r\n")
-    (rel / "uninstall.bat").write_text(UNINSTALL.format(**fmt).replace("\r\n", "\n"), encoding="utf-8", newline="\r\n")
+    fmt = dict(game=game, project=project, subdir=subdir, mod=mod, version=version, exe=exe,
+               game_build=guard.get("game_build") or "?")
 
-    today = dt.date.today().isoformat()
+    def bat(text: str) -> str:
+        # одинарные фигурные скобки в PowerShell-строке записаны как {{ }}
+        return text.format(**fmt)
+
+    for name, tpl in (("install.bat", INSTALL), ("uninstall.bat", UNINSTALL)):
+        (rel / name).write_text(bat(tpl).replace("\r\n", "\n"), encoding="utf-8", newline="\r\n")
     (rel / "README.txt").write_text(
-        f"ONEAS STUDIO -> HASSLE 2.0, версия {version} ({today})\r\n\r\n"
-        "Установка: запусти install.bat (доступны режимы 'установить всё' и 'выбрать модули').\r\n"
-        "Настройка состава: запусти configure.bat (откроет configurator.html).\r\n"
-        "Удаление: запусти uninstall.bat (удаляет все паки мода и восстанавливает бэкап).\r\n"
-        "Перенос выполнен с разрешения ONEAS STUDIO. Используйте на свой риск: проверьте правила проекта HASSLE.\r\n",
-        encoding="utf-8",
-    )
-    changelog = out_dir / "release" / "CHANGELOG.md"
-    if changelog.exists():
+        README.format(today=dt.date.today().isoformat(), **fmt), encoding="utf-8", newline="\r\n")
+    changelog = ROOT / "CHANGELOG.md"
+    if changelog.is_file():
         shutil.copy(changelog, rel / "CHANGELOG.md")
     zip_path = shutil.make_archive(str(rel), "zip", rel.parent, rel.name)
-    log.info("Релиз собран: %s (паков: %d)", zip_path, len(paks))
+    log.info("Релиз: %s (%d байт)", zip_path, Path(zip_path).stat().st_size)
 
 
 if __name__ == "__main__":

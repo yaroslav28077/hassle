@@ -216,7 +216,7 @@ function oaApply(){try{const s=oaStateObj;if(!s)return;const c=document.document
 function oaSave(){try{const s=oaS(),o={};for(const k of Object.keys(OA_DEFAULTS))k!=="__choices"&&(o[k]=s[k]);window.localStorage.setItem(OA_KEY,JSON.stringify(o))}catch(e){}}
 function oaSet(k,v){const s=oaS();s[k]=v;oaSave();oaApply()}
 function oaReset(){const s=oaS();for(const k of Object.keys(OA_DEFAULTS))k!=="__choices"&&(s[k]=OA_DEFAULTS[k]);oaSave();oaApply()}
-function oaR(g,fo,fn,self,args){const use=oaOn(g),f=use?fn:fo,a=Array.prototype.slice.call(args);if(use&&a[1]){a[1]=a[1].__oaN||(a[1].__oaN=[])}const v=f.apply(self,a);if(v&&typeof v==="object"){try{v.key=(v.key==null?"":String(v.key))+(use?"|oaN":"|oaO")}catch(e){}}return v}
+function oaR(g,fo,fn,self,args){const use=oaOn(g),f=use?fn:fo,a=Array.prototype.slice.call(args);if(use&&a[1]){a[1]=a[1].__oaN||(a[1].__oaN=[])}const v=f.apply(self,a);if(v&&typeof v==="object"){try{const k=(v.key==null?"":String(v.key))+(use?"|oaN":"|oaO");v.key=k;v.props=Object.assign({},v.props,{key:k})}catch(e){}}return v}
 window.oneasOpenSettings=function(){const s=oaS();s.open=!0;try{window.setCursorStatus&&window.setCursorStatus("OneasSettings",!0)}catch(e){}};
 window.oneasCloseSettings=function(){const s=oaS();s.open=!1;try{window.setCursorStatus&&window.setCursorStatus("OneasSettings",!1)}catch(e){}};
 window.oneasSettings=function(){return JSON.parse(JSON.stringify(oaS()))};

@@ -2,6 +2,17 @@
 
 Журнал ведёт агент. Новые записи сверху.
 
+## 2026-11-12 17:25 — v6 пилот «Настройки ONEAS» (Gumball, проверено в превью, ждёт теста в игре)
+- `tools/oneas_runtime.py`: переключаемый Hud.js. Оригинальные render-функции HASSLE не меняются (переименование NAME -> NAME$o), вариант v5 рядом как NAME$n, диспетчер `oaR` с отдельным кэшем рендера и key корня (key дублируется в props, иначе теряется при fallthrough-атрибутах и Vue сшивает разные блоки). Группы: top (qi, xn, ao), radar (Qd, tc, Vc, yu + computed карты), speed (or, Ql, Bl). CSS v5 ограничен классами `html.oa-top/oa-radar/oa-speed`, Authorization — `html.oa-on`.
+- Панель «Настройки ONEAS» (стиль «Меню игрока» ONEAS): 3 группы + «Безопасный режим», сброс, версия, благодарность ONEAS; шрифты явные (`Hassle Open Sans` / `Hassle Open Sans Condensed`), без `inherit`, иконки SVG/`×`, без keydown. Состояние — `window.App.$data.__oneas` (реактивно), сохранение `localStorage` `oneas.hassle.settings.v1` с валидацией.
+- `PauseMenu.js`: кнопка «Настройки ONEAS» В КОНЕЦ `buttons` (`setPatchButtonLabel` пишет в `buttons[2]`).
+- `tools/check_update.py` + `tools/pak_index.py`: защита от обновлений (версия лаунчера, md5 паков, SHA-1 записей индекса без распаковки Oodle); `build_mod.py` пишет `out/update_guard.json` автоматически.
+- `tools/make_installer.py` v6: один пак, автопоиск игры, авто-запрос прав администратора, запрет при запущенной игре, проверка обновлений по `update_guard.txt`, удаление паков старых версий, полный uninstall.
+- `tools/preview/`: локальное превью (Radmir uiresources + Exports + заглушки только для превью).
+- Сборка: `out/zzz_OneasPort_P.pak` 127 файлов, `out/release/zzz_OneasPort_0.1.0.zip` 12 076 886 Б. Инструкция теста: `docs/PILOT_SETTINGS.md`.
+- Превью: 6 циклов переключения без ошибок и роста DOM, safe/reset/persist ок, кнопка ESC ок. Не проверено: Cohtml-шрифты, Cohtml localStorage, 21:9.
+- Следующий шаг: тест пилота в игре -> полировка под референс ONEAS (полоски под радаром, порядок правого верха, разомкнутая дуга спидометра, подписи клавиш) как новые варианты + остальные опции 0.1.0.
+
 ## Текущее состояние
 - Фаза: 4 / 6 -> **Откат на стабильную v5 (без панели настроек, по запросу пользователя — чтобы спокойно играть)**
 - Статус карты `mapping/asset_map.csv`: `650` строк: `verified=18`, `packed=113`, `converted=68`, `deferred=55` (`Track B` + доп. окна + `ui_0650` `PauseMenu.js`), `skip=396`.

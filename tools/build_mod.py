@@ -347,6 +347,11 @@ def build_all(
             json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         log.info("Манифест сохранён: out/build_manifest.json (паков=%d, файлов=%d)", manifest["total_paks"], manifest["total_files"])
+        # защита от обновлений: запоминаем версии пропатченных файлов игры (tools/check_update.py)
+        from check_update import record  # noqa: PLC0415
+
+        g = record()
+        log.info("Защита от обновлений: out/update_guard.json (сборка игры %s, файлов %d)", g["game_build"], len(g["files"]))
     else:
         log.info("[DRY-RUN] Проверка успешна (паков к сборке=%d, файлов=%d); файлы не записывались.", manifest["total_paks"], manifest["total_files"])
 
