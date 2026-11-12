@@ -1,0 +1,4295 @@
+{
+  "game_dir": "C:\\Program Files (x86)\\HASSLE GAMES\\Hassle Online",
+  "project_name": "HassleOnline",
+  "ue_version": "UE5 5.8.4.0 (из PE FileVersion)",
+  "exe_candidates": [
+    "HassleOnline-Win64-Shipping.exe"
+  ],
+  "paks_dirs": [
+    "C:\\Program Files (x86)\\HASSLE GAMES\\Hassle Online\\HassleOnline\\Content\\Paks"
+  ],
+  "paks_subfolders": [],
+  "pak_files": [
+    {
+      "file": "pakchunk0-Windows.pak",
+      "size_mb": 29.8,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk10-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk100-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk101-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk102-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk103-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk104-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk105-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk106-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk106_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk107-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk107_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk108-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk109-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk109_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk11-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk110-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk110_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk111-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk112-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk112_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk113-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk113_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk114-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk114_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk115-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk115_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk116-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk116_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk117-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk117_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk118-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk118_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk119-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk119_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk12-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk120-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk120_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk121-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk121_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk122-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk123-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk123_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk124-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk125-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk125_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk126-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk126_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk127-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk127_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk128-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk128_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk129-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk129_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk13-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk130-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk131-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk131_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk132-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk132_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk133-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk134-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk134_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk135-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk136-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk137-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk137_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk138-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk138_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk139-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk139_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk14-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk140-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk140_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk141-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk141_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk141_s2-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk142-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk143-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk144-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk145-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk146-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk147-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk148-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk149-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk15-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk150-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk151-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk152-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk153-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk154-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk155-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk156-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk157-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk158-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk159-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk16-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk160-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk160_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk161-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk162-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk162_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk163-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk163_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk164-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk164_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk165-Windows.pak",
+      "size_mb": 2.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk166-Windows.pak",
+      "size_mb": 90.6,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk167-Windows.pak",
+      "size_mb": 90.6,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk168-Windows.pak",
+      "size_mb": 89.5,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk169-Windows.pak",
+      "size_mb": 88.7,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk17-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk170-Windows.pak",
+      "size_mb": 77.5,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk171-Windows.pak",
+      "size_mb": 79.8,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk172-Windows.pak",
+      "size_mb": 84.2,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk173-Windows.pak",
+      "size_mb": 86.3,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk174-Windows.pak",
+      "size_mb": 87.1,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk175-Windows.pak",
+      "size_mb": 86.4,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk176-Windows.pak",
+      "size_mb": 86.9,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk177-Windows.pak",
+      "size_mb": 85.9,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk178-Windows.pak",
+      "size_mb": 87.1,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk179-Windows.pak",
+      "size_mb": 87.4,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk18-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk180-Windows.pak",
+      "size_mb": 88.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk181-Windows.pak",
+      "size_mb": 30.8,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk182-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk19-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk2-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk20-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk21-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk22-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk23-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk24-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk25-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk26-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk27-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk28-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk29-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk3-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk30-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk31-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk32-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk33-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk34-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk35-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk35_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk35_s2-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk36-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk36_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk37-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk38-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk39-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk4-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk40-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk41-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk42-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk43-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk44-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk45-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk46-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk47-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk48-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk49-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk49_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk5-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk50-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk50_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk51-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk51_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk52-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk52_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk53-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk53_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk54-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk54_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk55-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk55_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk56-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk56_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk57-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk57_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk58-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk58_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk59-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk59_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk6-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk60-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk60_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk61-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk61_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk62-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk62_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk63-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk64-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk65-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk65_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk66-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk66_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk67-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk68-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk68_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk69-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk69_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk7-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk70-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk71-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk72-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk73-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk74-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk75-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk76-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk77-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk78-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk79-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk8-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk80-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk81-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk82-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk83-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk84-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk85-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk86-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk86_s1-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk87-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk88-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk89-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk9-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk90-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk91-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk92-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk93-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk94-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk95-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk96-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk97-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk98-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    },
+    {
+      "file": "pakchunk99-Windows.pak",
+      "size_mb": 0.0,
+      "pak_version": 12,
+      "encrypted_index": false,
+      "encryption_key_guid_set": false
+    }
+  ],
+  "utoc_files": [
+    {
+      "file": "global.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk0-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2928,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3833,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk10-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1971,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk100-Windows.utoc",
+      "toc_version": 8,
+      "entries": 537,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk101-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1173,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk102-Windows.utoc",
+      "toc_version": 8,
+      "entries": 924,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk103-Windows.utoc",
+      "toc_version": 8,
+      "entries": 905,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk104-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1199,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk105-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1193,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk106-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1216,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk106_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 136,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk107-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1146,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk107_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 130,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk108-Windows.utoc",
+      "toc_version": 8,
+      "entries": 978,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk109-Windows.utoc",
+      "toc_version": 8,
+      "entries": 881,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk109_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 28,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk11-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1972,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk110-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1094,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk110_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 84,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk111-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1028,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk112-Windows.utoc",
+      "toc_version": 8,
+      "entries": 571,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk112_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 79,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk113-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1105,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk113_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 40,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk114-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1559,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk114_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 68,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk115-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1773,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk115_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 120,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk116-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2418,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk116_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 192,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk117-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1051,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk117_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 100,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk118-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1065,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk118_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 120,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk119-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1270,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk119_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 186,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk12-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1980,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk120-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1065,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk120_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 153,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk121-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1043,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk121_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 54,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk122-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1015,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk123-Windows.utoc",
+      "toc_version": 8,
+      "entries": 989,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk123_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 60,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk124-Windows.utoc",
+      "toc_version": 8,
+      "entries": 825,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk125-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1727,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk125_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 192,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk126-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1099,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk126_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 28,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk127-Windows.utoc",
+      "toc_version": 8,
+      "entries": 996,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk127_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 182,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk128-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1107,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk128_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 177,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk129-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1123,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk129_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 106,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk13-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1958,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk130-Windows.utoc",
+      "toc_version": 8,
+      "entries": 927,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk131-Windows.utoc",
+      "toc_version": 8,
+      "entries": 906,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk131_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 70,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk132-Windows.utoc",
+      "toc_version": 8,
+      "entries": 265,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk132_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 510,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk133-Windows.utoc",
+      "toc_version": 8,
+      "entries": 857,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk134-Windows.utoc",
+      "toc_version": 8,
+      "entries": 811,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk134_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 132,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk135-Windows.utoc",
+      "toc_version": 8,
+      "entries": 819,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk136-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1035,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk137-Windows.utoc",
+      "toc_version": 8,
+      "entries": 833,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk137_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 76,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk138-Windows.utoc",
+      "toc_version": 8,
+      "entries": 963,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk138_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 38,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk139-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1221,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk139_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 114,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk14-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1936,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk140-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1255,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk140_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 131,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk141-Windows.utoc",
+      "toc_version": 8,
+      "entries": 271,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk141_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 512,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk141_s2-Windows.utoc",
+      "toc_version": 8,
+      "entries": 58,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk142-Windows.utoc",
+      "toc_version": 8,
+      "entries": 607,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk143-Windows.utoc",
+      "toc_version": 8,
+      "entries": 562,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk144-Windows.utoc",
+      "toc_version": 8,
+      "entries": 631,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk145-Windows.utoc",
+      "toc_version": 8,
+      "entries": 577,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk146-Windows.utoc",
+      "toc_version": 8,
+      "entries": 541,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk147-Windows.utoc",
+      "toc_version": 8,
+      "entries": 719,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk148-Windows.utoc",
+      "toc_version": 8,
+      "entries": 540,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk149-Windows.utoc",
+      "toc_version": 8,
+      "entries": 736,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk15-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1902,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk150-Windows.utoc",
+      "toc_version": 8,
+      "entries": 510,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk151-Windows.utoc",
+      "toc_version": 8,
+      "entries": 646,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk152-Windows.utoc",
+      "toc_version": 8,
+      "entries": 735,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk153-Windows.utoc",
+      "toc_version": 8,
+      "entries": 632,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk154-Windows.utoc",
+      "toc_version": 8,
+      "entries": 665,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk155-Windows.utoc",
+      "toc_version": 8,
+      "entries": 588,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk156-Windows.utoc",
+      "toc_version": 8,
+      "entries": 736,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk157-Windows.utoc",
+      "toc_version": 8,
+      "entries": 938,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk158-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1113,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk159-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1129,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk16-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1905,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk160-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1083,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk160_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 60,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk161-Windows.utoc",
+      "toc_version": 8,
+      "entries": 950,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk162-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1271,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk162_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 78,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk163-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1118,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk163_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 80,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk164-Windows.utoc",
+      "toc_version": 8,
+      "entries": 890,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk164_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 189,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk165-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk166-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk167-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk168-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk169-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk17-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1721,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk170-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk171-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk172-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk173-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk174-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk175-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk176-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk177-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk178-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk179-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk18-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1942,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk180-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk181-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1,
+      "flags": [
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk182-Windows.utoc",
+      "toc_version": 8,
+      "entries": 496,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk19-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1974,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk2-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3552,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk20-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1896,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk21-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1933,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk22-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1946,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk23-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1853,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk24-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1947,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk25-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1959,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk26-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1970,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk27-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1988,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk28-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1974,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk29-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1935,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk3-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3592,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk30-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1962,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk31-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1973,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk32-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1932,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk33-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1947,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk34-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1757,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk35-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1156,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk35_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 760,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk35_s2-Windows.utoc",
+      "toc_version": 8,
+      "entries": 29,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk36-Windows.utoc",
+      "toc_version": 8,
+      "entries": 687,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk36_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 151,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk37-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1651,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk38-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2416,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk39-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2730,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk4-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3420,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk40-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3004,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk41-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2373,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk42-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2242,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk43-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1548,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk44-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1411,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk45-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1448,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk46-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1466,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk47-Windows.utoc",
+      "toc_version": 8,
+      "entries": 4097,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk48-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3635,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk49-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3614,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk49_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 993,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk5-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2617,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk50-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3479,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk50_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 933,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk51-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3441,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk51_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 717,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk52-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3372,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk52_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1151,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk53-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3284,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk53_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 788,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk54-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3357,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk54_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 894,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk55-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3540,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk55_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1014,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk56-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3680,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk56_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1284,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk57-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3308,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk57_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 490,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk58-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3366,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk58_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 506,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk59-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3400,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk59_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 307,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk6-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1886,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk60-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3605,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk60_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 384,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk61-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3742,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk61_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 310,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk62-Windows.utoc",
+      "toc_version": 8,
+      "entries": 3650,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk62_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 701,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk63-Windows.utoc",
+      "toc_version": 8,
+      "entries": 761,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk64-Windows.utoc",
+      "toc_version": 8,
+      "entries": 785,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk65-Windows.utoc",
+      "toc_version": 8,
+      "entries": 4935,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk65_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 470,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk66-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1397,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk66_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 55,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk67-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1403,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk68-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1205,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk68_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 165,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk69-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1370,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk69_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 130,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk7-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1804,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk70-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1033,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk71-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1150,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk72-Windows.utoc",
+      "toc_version": 8,
+      "entries": 462,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk73-Windows.utoc",
+      "toc_version": 8,
+      "entries": 430,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk74-Windows.utoc",
+      "toc_version": 8,
+      "entries": 439,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk75-Windows.utoc",
+      "toc_version": 8,
+      "entries": 426,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk76-Windows.utoc",
+      "toc_version": 8,
+      "entries": 421,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk77-Windows.utoc",
+      "toc_version": 8,
+      "entries": 556,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk78-Windows.utoc",
+      "toc_version": 8,
+      "entries": 635,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk79-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1224,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk8-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1823,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk80-Windows.utoc",
+      "toc_version": 8,
+      "entries": 629,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk81-Windows.utoc",
+      "toc_version": 8,
+      "entries": 951,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk82-Windows.utoc",
+      "toc_version": 8,
+      "entries": 994,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk83-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1061,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk84-Windows.utoc",
+      "toc_version": 8,
+      "entries": 854,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk85-Windows.utoc",
+      "toc_version": 8,
+      "entries": 919,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk86-Windows.utoc",
+      "toc_version": 8,
+      "entries": 2333,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk86_s1-Windows.utoc",
+      "toc_version": 8,
+      "entries": 102,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk87-Windows.utoc",
+      "toc_version": 8,
+      "entries": 901,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk88-Windows.utoc",
+      "toc_version": 8,
+      "entries": 669,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk89-Windows.utoc",
+      "toc_version": 8,
+      "entries": 730,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk9-Windows.utoc",
+      "toc_version": 8,
+      "entries": 1918,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk90-Windows.utoc",
+      "toc_version": 8,
+      "entries": 602,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk91-Windows.utoc",
+      "toc_version": 8,
+      "entries": 582,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk92-Windows.utoc",
+      "toc_version": 8,
+      "entries": 590,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk93-Windows.utoc",
+      "toc_version": 8,
+      "entries": 637,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk94-Windows.utoc",
+      "toc_version": 8,
+      "entries": 595,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk95-Windows.utoc",
+      "toc_version": 8,
+      "entries": 602,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk96-Windows.utoc",
+      "toc_version": 8,
+      "entries": 579,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk97-Windows.utoc",
+      "toc_version": 8,
+      "entries": 714,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk98-Windows.utoc",
+      "toc_version": 8,
+      "entries": 545,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    },
+    {
+      "file": "pakchunk99-Windows.utoc",
+      "toc_version": 8,
+      "entries": 590,
+      "flags": [
+        "Compressed",
+        "Indexed"
+      ],
+      "encrypted": false,
+      "signed": false
+    }
+  ],
+  "sig_files": [],
+  "anticheat_hints": [],
+  "content_encrypted": false,
+  "content_signed": false
+}

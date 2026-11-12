@@ -1,0 +1,12 @@
+config.yaml
+source/*
+!source/README.txt
+Exports/
+game_ref/originals/
+game_ref/ui_raw/
+work/
+out/
+logs/
+__pycache__/
+*.pyc
+*.bak

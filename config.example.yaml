@@ -1,0 +1,26 @@
+# Скопируй в config.yaml и заполни. Пути в Windows пиши с прямыми слешами: C:/Games/HASSLE
+
+source:
+  build_dir: ""            # папка со сборкой ONEAS (распакованный архив сборки). Пусто = ./source
+  radmir_dir: ""           # установленный Radmir RP (необязательно: для сравнения с оригинальными файлами)
+
+game:
+  install_dir: "C:/Games/HASSLE 2.0"     # корень установки игры (только чтение)
+  project_name: ""                        # заполняется на фазе 2 (папка, в которой Content/Paks)
+  mods_subdir: "~mods"                    # подпапка в Content/Paks для мода (уточняется на фазе 2)
+
+tools:
+  ffmpeg: "C:/Tools/ffmpeg/bin/ffmpeg.exe"
+  blender: "C:/Program Files/Blender Foundation/Blender 4.2/blender.exe"
+
+ue:
+  engine_dir: "C:/Program Files/Epic Games/UE_5.3"   # версия строго как у игры (фаза 2)
+  engine_major: 5                                     # 4 или 5
+  mod_project: "C:/UEProjects/HASSLE/HASSLE.uproject" # имя .uproject = game.project_name
+  extra_cook_args: []
+
+mod:
+  pak_name: "zzz_OneasPort"
+  pak_mode: "pak"        # pak | iostore (по результату фазы 2)
+  chunk_id: 100          # для iostore
+  version: "0.1.0"

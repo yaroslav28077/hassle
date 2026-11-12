@@ -1,0 +1,287 @@
+version: 1
+mod_prefix: zzz_OneasPort
+core_pak: zzz_OneasPort_core_P
+
+# Реальные опции, выявленные в файлах сборки ONEAS STUDIO и localStorage.json.
+# Настройки из JsLoader / SAMP (classSelect, classSwitch, alocker, rakNetInfo) не включены (skip).
+
+presets:
+  basic:
+    label: "Basic (лёгкий)"
+    description: "Базовые иконки GPS, оружия, UI-контролы и UI-звуки без тяжёлых 1080p-фонов и HUD-иконок."
+    options:
+      gps_icons: true
+      weapon_icons: true
+      ui_sounds: true
+      hud_bonus_badge: none
+      hud_status_icons: false
+      speedometer_bg: false
+      loading_screen: none
+      auth_bg: none
+      css_hud_patches: false
+      ui_fonts: false
+
+  maximum:
+    label: "Maximum (полный Дорожка A)"
+    description: "Все доступные в Дорожке A визуальные и звуковые модули ONEAS."
+    options:
+      gps_icons: true
+      weapon_icons: true
+      ui_sounds: false
+      hud_bonus_badge: bonus_x2
+      hud_status_icons: true
+      speedometer_bg: true
+      loading_screen: mobilesc0
+      auth_bg: bg_auth_0
+      css_hud_patches: true
+      ui_fonts: false
+
+  custom:
+    label: "Custom (пользовательский)"
+    description: "Текущие значения из блока options ниже (редактируются вручную или в configurator.html)."
+    options: {}
+
+active_preset: maximum
+
+options:
+  - id: gps_icons
+    name: "GPS-иконки карты"
+    type: toggle
+    default: true
+    available: true
+    description: "48 перерисованных иконок карты/GPS (uiresources/images/gps -> Main/images/gps, подогнано под 80x80)."
+    variants:
+      - value: true
+        label: "ONEAS (48 иконок)"
+        preview: "work/previews/gps/0.png"
+      - value: false
+        label: "Оригинал HASSLE"
+
+  - id: weapon_icons
+    name: "Иконки оружия HUD"
+    type: toggle
+    default: true
+    available: true
+    description: "46 файлов (oneas-img/weapon/1..44,46 -> Main/images/hud; 0.png -> hassle-logo2.png + сезонные hassle-logo-helloween.png / hassle-logo-new-year.png). 45.png помечена no_slot."
+    variants:
+      - value: true
+        label: "ONEAS (43 иконки)"
+        preview: "work/previews/weapon/24.png"
+      - value: false
+        label: "Оригинал HASSLE"
+
+  - id: ui_sounds
+    name: "Звуки интерфейса и авто (Cohtml)"
+    type: toggle
+    default: false
+    available: true
+    description: "4 звука: инвентарь (open/close), сирена и старт двигателя (uiresources/sounds -> Main/sounds)."
+    variants:
+      - value: true
+        label: "ONEAS (4 файла)"
+      - value: false
+        label: "Оригинал HASSLE"
+
+  - id: hud_bonus_badge
+    name: "Бейдж бонуса HUD"
+    type: choice
+    default: bonus_x2
+    available: true
+    description: "Варианты значка бонуса из oneas-img/hud/bonus-{2,3}.png -> Main/assets/278.png (60x48) и Main/assets/373.png (53x46) (масштабирование ~2x)."
+    variants:
+      - value: none
+        label: "Оригинал HASSLE"
+      - value: bonus_x2
+        label: "Бонус x2 (bonus-2.png)"
+        preview: "work/previews/hud/bonus-2.png"
+      - value: bonus_x3
+        label: "Бонус x3 (bonus-3.png)"
+        preview: "work/previews/hud/bonus-3.png"
+
+  - id: hud_status_icons
+    name: "Иконки HP и брони HUD"
+    type: toggle
+    default: true
+    available: true
+    description: "icon-health.png -> Main/assets/health2.png (72x59) и icon-armour.png -> Main/assets/armour2.png (161x198). Голод/заморозка/онлайн (base64 в Hud.js) отнесены к patch_text."
+    variants:
+      - value: true
+        label: "ONEAS (HP + Armour)"
+        preview: "work/previews/hud/icon-health.png"
+      - value: false
+        label: "Оригинал HASSLE"
+
+  - id: speedometer_bg
+    name: "Базовые SVG спидометра (топливо/мойка)"
+    type: toggle
+    default: true
+    available: true
+    description: "fuel-bg.svg и wash-bg.svg из oneas-img/speed -> Main/assets. Остальные 6 active/danger SVG — inline SVG/CSS в Hud.js/Hud.css (помечены patch_text в css_hud_patches)."
+    variants:
+      - value: true
+        label: "ONEAS (fuel-bg + wash-bg)"
+        preview: "work/previews/speed/fuel-bg.svg"
+      - value: false
+        label: "Оригинал HASSLE"
+
+  - id: loading_screen
+    name: "Фон экрана загрузки (mobilescs.txd)"
+    type: choice
+    default: mobilesc0
+    available: true
+    description: "8 экранов 1920x1080 из MobileHud/mobilescs.txd -> LoadingScreen/img/background.2fc2a64f.png (rockstar.png: no_slot)."
+    variants:
+      - value: none
+        label: "Оригинал HASSLE"
+      - value: bglegal
+        label: "bglegal"
+        preview: "work/previews/loading_screen/bglegal.png"
+      - value: mobilesc0
+        label: "mobilesc0"
+        preview: "work/previews/loading_screen/mobilesc0.png"
+      - value: mobilesc1
+        label: "mobilesc1"
+        preview: "work/previews/loading_screen/mobilesc1.png"
+      - value: mobilesc2
+        label: "mobilesc2"
+        preview: "work/previews/loading_screen/mobilesc2.png"
+      - value: mobilesc3
+        label: "mobilesc3"
+        preview: "work/previews/loading_screen/mobilesc3.png"
+      - value: mobilesc4
+        label: "mobilesc4"
+        preview: "work/previews/loading_screen/mobilesc4.png"
+      - value: mobilesc5
+        label: "mobilesc5"
+        preview: "work/previews/loading_screen/mobilesc5.png"
+      - value: mobilesc6
+        label: "mobilesc6"
+        preview: "work/previews/loading_screen/mobilesc6.png"
+
+  - id: auth_bg
+    name: "Фон регистрации/авторизации (bg-auth-0..30)"
+    type: choice
+    default: bg_auth_0
+    available: true
+    description: "31 фон из oneas-img/interfaces/bg-auth-*.png -> Main/assets/background3.png (1920x1080, 1:1) и Main/assets/bg-register.png (2340x1080 с padding)."
+    variants:
+      - value: none
+        label: "Оригинал HASSLE"
+      - value: bg_auth_0
+        label: "bg-auth-0"
+        preview: "work/previews/auth_bg/bg-auth-0.png"
+      - value: bg_auth_1
+        label: "bg-auth-1"
+        preview: "work/previews/auth_bg/bg-auth-1.png"
+      - value: bg_auth_2
+        label: "bg-auth-2"
+        preview: "work/previews/auth_bg/bg-auth-2.png"
+      - value: bg_auth_3
+        label: "bg-auth-3"
+        preview: "work/previews/auth_bg/bg-auth-3.png"
+      - value: bg_auth_4
+        label: "bg-auth-4"
+        preview: "work/previews/auth_bg/bg-auth-4.png"
+      - value: bg_auth_5
+        label: "bg-auth-5"
+        preview: "work/previews/auth_bg/bg-auth-5.png"
+      - value: bg_auth_6
+        label: "bg-auth-6"
+        preview: "work/previews/auth_bg/bg-auth-6.png"
+      - value: bg_auth_7
+        label: "bg-auth-7"
+        preview: "work/previews/auth_bg/bg-auth-7.png"
+      - value: bg_auth_8
+        label: "bg-auth-8"
+        preview: "work/previews/auth_bg/bg-auth-8.png"
+      - value: bg_auth_9
+        label: "bg-auth-9"
+        preview: "work/previews/auth_bg/bg-auth-9.png"
+      - value: bg_auth_10
+        label: "bg-auth-10"
+        preview: "work/previews/auth_bg/bg-auth-10.png"
+      - value: bg_auth_11
+        label: "bg-auth-11"
+        preview: "work/previews/auth_bg/bg-auth-11.png"
+      - value: bg_auth_12
+        label: "bg-auth-12"
+        preview: "work/previews/auth_bg/bg-auth-12.png"
+      - value: bg_auth_13
+        label: "bg-auth-13"
+        preview: "work/previews/auth_bg/bg-auth-13.png"
+      - value: bg_auth_14
+        label: "bg-auth-14"
+        preview: "work/previews/auth_bg/bg-auth-14.png"
+      - value: bg_auth_15
+        label: "bg-auth-15"
+        preview: "work/previews/auth_bg/bg-auth-15.png"
+      - value: bg_auth_16
+        label: "bg-auth-16"
+        preview: "work/previews/auth_bg/bg-auth-16.png"
+      - value: bg_auth_17
+        label: "bg-auth-17"
+        preview: "work/previews/auth_bg/bg-auth-17.png"
+      - value: bg_auth_18
+        label: "bg-auth-18"
+        preview: "work/previews/auth_bg/bg-auth-18.png"
+      - value: bg_auth_19
+        label: "bg-auth-19"
+        preview: "work/previews/auth_bg/bg-auth-19.png"
+      - value: bg_auth_20
+        label: "bg-auth-20"
+        preview: "work/previews/auth_bg/bg-auth-20.png"
+      - value: bg_auth_21
+        label: "bg-auth-21"
+        preview: "work/previews/auth_bg/bg-auth-21.png"
+      - value: bg_auth_22
+        label: "bg-auth-22"
+        preview: "work/previews/auth_bg/bg-auth-22.png"
+      - value: bg_auth_23
+        label: "bg-auth-23"
+        preview: "work/previews/auth_bg/bg-auth-23.png"
+      - value: bg_auth_24
+        label: "bg-auth-24"
+        preview: "work/previews/auth_bg/bg-auth-24.png"
+      - value: bg_auth_25
+        label: "bg-auth-25"
+        preview: "work/previews/auth_bg/bg-auth-25.png"
+      - value: bg_auth_26
+        label: "bg-auth-26"
+        preview: "work/previews/auth_bg/bg-auth-26.png"
+      - value: bg_auth_27
+        label: "bg-auth-27"
+        preview: "work/previews/auth_bg/bg-auth-27.png"
+      - value: bg_auth_28
+        label: "bg-auth-28"
+        preview: "work/previews/auth_bg/bg-auth-28.png"
+      - value: bg_auth_29
+        label: "bg-auth-29"
+        preview: "work/previews/auth_bg/bg-auth-29.png"
+      - value: bg_auth_30
+        label: "bg-auth-30"
+        preview: "work/previews/auth_bg/bg-auth-30.png"
+
+  - id: css_hud_patches
+    name: "Патчи HUD и авторизации ONEAS (радар, спидометр, звёзды, полосы, оверлей)"
+    type: toggle
+    default: true
+    available: true
+    description: "Пересборка Hud.js, Hud.css и Authorization.css под раскладку ONEAS STUDIO + 17 SVG/PNG/GIF ресурсов (прямоугольный радар, часы/дата, правый блок со звёздами/логотипом/полосами, изогнутые датчики бензина/мойки, шум на экране входа)."
+    variants:
+      - value: true
+        label: "Включить патчи ONEAS HUD"
+      - value: false
+        label: "Оригинал HASSLE"
+
+  - id: ui_fonts
+    name: "Шрифты ONEAS (Akrobat, GothamPro, ALSRubl)"
+    type: toggle
+    default: false
+    available: false
+    unavailable_reason: "no_slot: в HASSLE 2.0 используются OpenSans/HassleOpenSans/Roboto/Caveat; для подключения сторонних шрифтов нужен патч CSS."
+    description: "16 шрифтов из uiresources/fonts/ (OS/2 fsType разрешает встраивание)."
+    variants:
+      - value: true
+        label: "ONEAS шрифты"
+      - value: false
+        label: "Оригинальные шрифты HASSLE"
