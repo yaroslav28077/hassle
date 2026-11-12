@@ -1,4 +1,7 @@
-"""Фаза 4 (Дорожка A): патч Hud.js, Hud.css и Authorization.css под стиль ONEAS STUDIO (v5, без настроек).
+"""Фаза 4 (Дорожка A): Hud.js / Hud.css / Authorization.css / PauseMenu.js под стиль ONEAS STUDIO.
+
+v6: варианты ONEAS и родной HASSLE в одном файле, переключение в игре (панель «Настройки ONEAS»,
+кнопка в меню ESC). Логика переключения — tools/oneas_runtime.py.
 
 Читает (только чтение):
 - Exports/**/Content/UserInterface/Main/assets/{Hud.js,Hud.css,Authorization.css}
@@ -19,6 +22,7 @@ import shutil
 from pathlib import Path
 
 from common import ROOT, get_logger
+from oneas_runtime import PANEL_CSS, PANEL_OPTIONS, build_switchable_hud_js, panel_js, scope_css
 
 EXPORTS_DIR = ROOT / "Exports"
 ONEAS_IMG = ROOT / "work" / "build_only" / "uiresources" / "oneas-img"
@@ -477,6 +481,50 @@ ONEAS_AUTH_CSS = """
 """
 
 
+PAUSE_BTN_OLD = '{icon:"Exit",label:"Выйти из игры",action:"openExitModal",topLine:!0,danger:!0}]'
+PAUSE_BTN_NEW = '{icon:"Exit",label:"Выйти из игры",action:"openExitModal",topLine:!0,danger:!0},{icon:"Settings",label:"Настройки ONEAS",action:"openOneasSettings",topLine:!0}]'
+PAUSE_M_OLD = 'openSettings(){this.onOpenMainMenu("settings")},'
+PAUSE_M_NEW = ('openSettings(){this.onOpenMainMenu("settings")},'
+               'openOneasSettings(){this.isMenuVisible=!1,setTimeout(()=>{window.closePauseMenu(),'
+               'setTimeout(()=>{window.oneasOpenSettings&&window.oneasOpenSettings()},120)},250)},')
+
+
+def patch_pause_menu(src_text: str) -> str:
+    """Кнопка «Настройки ONEAS» в меню ESC. Добавляется В КОНЕЦ: setPatchButtonLabel пишет в buttons[2]."""
+    txt = replace_once(src_text, PAUSE_BTN_OLD, PAUSE_BTN_NEW, "PauseMenu_buttons")
+    return replace_once(txt, PAUSE_M_OLD, PAUSE_M_NEW, "PauseMenu_openOneasSettings")
+
+
+def split_hud_css_sections(css: str) -> dict[str, str]:
+    """Разбить ONEAS_HUD_CSS v5 на группы top / radar / speed по комментариям-заголовкам."""
+    i1, i2, i3 = css.index("/* 1."), css.index("/* 2."), css.index("/* 3.")
+    return {"top": css[i1:i2], "radar": css[i2:i3], "speed": css[i3:]}
+
+
+def runtime_defaults() -> dict:
+    """Значения по умолчанию для панели (build_options.yaml: runtime_defaults), с проверкой допустимых значений."""
+    import yaml  # noqa: PLC0415
+
+    d = {"safe": False, "top": "oneas", "radar": "oneas", "speed": "oneas"}
+    p = ROOT / "build_options.yaml"
+    if p.is_file():
+        cfg = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+        d.update({k: v for k, v in (cfg.get("runtime_defaults") or {}).items() if k in d})
+    choices = {o["key"]: [c[0] for c in o["choices"]] for o in PANEL_OPTIONS}
+    for k, allowed in choices.items():
+        if d[k] not in allowed:
+            raise SystemExit(f"runtime_defaults.{k}={d[k]!r}: допустимо {allowed}")
+    d["__choices"] = choices
+    return d
+
+
+def write_text_lf(path: Path, text: str) -> int:
+    """Пишем с LF как в оригинале (на Windows write_text превращал \\n в \\r\\n внутри шаблонных строк JS)."""
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+    return len(text.encode("utf-8"))
+
+
 def main() -> None:
     log = get_logger("patch_ui")
     copied = copy_oneas_assets()
@@ -485,23 +533,25 @@ def main() -> None:
     hud_js_src = find_export_file("Hud.js")
     hud_css_src = find_export_file("Hud.css")
     auth_css_src = find_export_file("Authorization.css")
+    pause_src = find_export_file("PauseMenu.js")
 
-    patched_hud_js = patch_hud_js(hud_js_src.read_text(encoding="utf-8"))
-    (OUT_ASSETS / "Hud.js").write_text(patched_hud_js, encoding="utf-8")
-    log.info("Записан пропатченный Hud.js: %d байт", len(patched_hud_js.encode("utf-8")))
+    orig_js = hud_js_src.read_text(encoding="utf-8")
+    v5_js = patch_hud_js(orig_js)  # v5 как «вариант ONEAS» каждой функции
+    defaults = runtime_defaults()
+    hud_js = build_switchable_hud_js(orig_js, v5_js, defaults, panel_js())
+    log.info("Hud.js (переключаемый): %d байт, по умолчанию %s", write_text_lf(OUT_ASSETS / "Hud.js", hud_js),
+             {k: v for k, v in defaults.items() if k != "__choices"})
 
-    patched_hud_css = hud_css_src.read_text(encoding="utf-8") + "\n" + ONEAS_HUD_CSS
-    (OUT_ASSETS / "Hud.css").write_text(patched_hud_css, encoding="utf-8")
-    log.info("Записан пропатченный Hud.css: %d байт", len(patched_hud_css.encode("utf-8")))
+    sections = split_hud_css_sections(ONEAS_HUD_CSS)
+    scoped = "\n".join(scope_css(sections[g], f"oa-{g}") for g in ("top", "radar", "speed"))
+    hud_css = hud_css_src.read_text(encoding="utf-8") + "\n" + scoped + "\n" + PANEL_CSS
+    log.info("Hud.css: %d байт", write_text_lf(OUT_ASSETS / "Hud.css", hud_css))
 
-    patched_auth_css = auth_css_src.read_text(encoding="utf-8") + "\n" + ONEAS_AUTH_CSS
-    (OUT_ASSETS / "Authorization.css").write_text(patched_auth_css, encoding="utf-8")
-    log.info("Записан пропатченный Authorization.css: %d байт", len(patched_auth_css.encode("utf-8")))
+    auth_css = auth_css_src.read_text(encoding="utf-8") + "\n" + scope_css(ONEAS_AUTH_CSS, "oa-on")
+    log.info("Authorization.css: %d байт", write_text_lf(OUT_ASSETS / "Authorization.css", auth_css))
 
-    pause_out = OUT_ASSETS / "PauseMenu.js"
-    if pause_out.exists():
-        pause_out.unlink()
-        log.info("Удалён устаревший PauseMenu.js")
+    pause_js = patch_pause_menu(pause_src.read_text(encoding="utf-8"))
+    log.info("PauseMenu.js: %d байт", write_text_lf(OUT_ASSETS / "PauseMenu.js", pause_js))
 
 
 if __name__ == "__main__":
